@@ -48,7 +48,7 @@
             app:layout_constraintStart_toEndOf="@id/foodImage"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_chainStyle="packed"
-            tools:text="맞집 이름" />
+            tools:text="맛집 이름" />
 
         <TextView
             android:id="@+id/categoryText"
@@ -89,7 +89,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/ic_arrow_forward_24px"
-            android:tint="#C7C7C7"
+            android:tint="@color/grayIcon"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />

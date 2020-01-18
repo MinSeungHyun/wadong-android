@@ -1,5 +1,6 @@
 package com.seunghyun.wadong.ui.add_story.story_edit
 
+import android.content.Intent
 import android.os.Bundle
 import com.bumptech.glide.Glide
 import com.seunghyun.wadong.R
@@ -18,6 +19,9 @@ class StoryEditActivity : BindingActivity<ActivityStoryEditBinding>() {
         item = intent.getSerializableExtra("item") as Restaurant
         binding.apply {
             item = this@StoryEditActivity.item
+            selectPictureButton.setOnClickListener {
+                startActivity(Intent(Intent.ACTION_PICK, android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI))
+            }
         }
         Glide.with(this@StoryEditActivity)
                 .load(item.image)

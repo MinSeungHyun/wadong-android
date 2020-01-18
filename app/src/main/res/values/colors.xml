@@ -8,4 +8,5 @@
     <color name="categoryUnselected">#2C000000</color>
 
     <color name="grayText">#444444</color>
+    <color name="grayIcon">#C7C7C7</color>
 </resources>
