@@ -6,4 +6,5 @@ interface MapViewController {
     fun getContext(): Context
     fun showFoundBottomSheet()
     fun startAddStoryActivity()
+    fun startStoryActivity()
 }

@@ -11,7 +11,7 @@ import com.seunghyun.wadong.ui.add_story.food.Restaurant
 import com.seunghyun.wadong.ui.add_story.food.getRestaurants
 
 class FoodRecyclerViewAdapter : RecyclerView.Adapter<FoodRecyclerViewAdapter.FoodViewHolder>() {
-    private val items = getRestaurants()
+    private val items = getRestaurants().shuffled()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): FoodViewHolder {
         val binding = DataBindingUtil.inflate<ItemRestaurantBinding>(

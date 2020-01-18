@@ -14,8 +14,10 @@
     <string name="book_description">하루라도 책을 읽지 않으면 입안에 가시가 돋는다.</string>
     <string name="create_story">스토리 생성</string>
     <string name="search">검색</string>
+    <string name="location">위치</string>
     <string name="my_location">내 위치</string>
     <string name="my_location_sample">서울시 용산구 청파로 77</string>
     <string name="comment">한마디...</string>
     <string name="select_picture">사진 선택</string>
+    <string name="my_story">내 스토리</string>
 </resources>

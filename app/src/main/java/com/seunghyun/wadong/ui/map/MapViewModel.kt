@@ -25,6 +25,7 @@ private val LUCK_LOCATIONS = listOf(
 
 class MainViewModel(private val controller: MapViewController) {
     val selectedCategory = ObservableField<Category>(Category.ALL)
+    var isStoryAdded = false
 
     private lateinit var map: GoogleMap
 
@@ -42,7 +43,11 @@ class MainViewModel(private val controller: MapViewController) {
 
         map.apply {
             setOnMarkerClickListener {
-                controller.showFoundBottomSheet()
+                if (it.title == "내 스토리") {
+                    controller.startStoryActivity()
+                } else {
+                    controller.showFoundBottomSheet()
+                }
                 false
             }
 
@@ -62,6 +67,7 @@ class MainViewModel(private val controller: MapViewController) {
             LUCK_LOCATIONS.forEach {
                 addCircle(circle.center(it.latLng))
                 addMarker(marker.position(LatLng(it.latLng.latitude - 0.0003, it.latLng.longitude)))
+                if (isStoryAdded) addMarker(MarkerOptions().position(LatLng(37.533771, 126.960510)).title("내 스토리"))
             }
         }
     }
