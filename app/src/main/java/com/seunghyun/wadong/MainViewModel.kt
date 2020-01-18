@@ -34,6 +34,11 @@ class MainViewModel(private val controller: MainViewController) {
         val currentLocation = LatLng(37.534753, 126.964309)
 
         map.apply {
+            setOnMarkerClickListener {
+                controller.showFoundBottomSheet()
+                false
+            }
+
             moveCamera(CameraUpdateFactory.newLatLng(currentLocation))
             moveCamera(CameraUpdateFactory.zoomTo(15f))
 

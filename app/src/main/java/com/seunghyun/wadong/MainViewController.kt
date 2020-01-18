@@ -4,4 +4,5 @@ import android.content.Context
 
 interface MainViewController {
     fun getContext(): Context
+    fun showFoundBottomSheet()
 }
