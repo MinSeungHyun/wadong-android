@@ -24,6 +24,8 @@ private val LUCK_LOCATIONS = listOf(
         LuckBag("남정초등학교", LatLng(37.536264, 126.965140))
 )
 
+private var isShowed = false
+
 class MainViewModel(private val controller: MapViewController) {
     val selectedCategory = ObservableField<Category>(Category.ALL)
     var isStoryAdded = false
@@ -71,8 +73,11 @@ class MainViewModel(private val controller: MapViewController) {
             }
         }
 
-        Handler().postDelayed({
-            controller.showLuckFoundDialog()
-        }, 2000)
+        if (!isShowed) {
+            Handler().postDelayed({
+                controller.showLuckFoundDialog()
+                isShowed = true
+            }, 2000)
+        }
     }
 }
