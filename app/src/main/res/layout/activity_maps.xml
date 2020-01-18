@@ -28,6 +28,21 @@
 
             <ImageView
                 style="@style/ClickableViewStyle"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginBottom="32dp"
+                android:background="@drawable/ripple_other_button"
+                android:elevation="8dp"
+                android:onClick="@{() -> vm.onRankButtonClick()}"
+                android:padding="6dp"
+                android:src="@drawable/luck_icon"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.1"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <ImageView
+                style="@style/ClickableViewStyle"
                 android:layout_width="52dp"
                 android:layout_height="52dp"
                 android:layout_marginBottom="32dp"
@@ -38,6 +53,20 @@
                 android:src="@drawable/ic_add"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <ImageView
+                style="@style/ClickableViewStyle"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginBottom="32dp"
+                android:background="@drawable/ripple_other_button"
+                android:elevation="8dp"
+                android:padding="8dp"
+                android:src="@drawable/ic_setting"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.9"
                 app:layout_constraintStart_toStartOf="parent" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 

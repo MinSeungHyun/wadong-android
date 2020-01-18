@@ -20,4 +20,5 @@
     <string name="comment">한마디...</string>
     <string name="select_picture">사진 선택</string>
     <string name="my_story">내 스토리</string>
+    <string name="my_points">나의 복포인트</string>
 </resources>

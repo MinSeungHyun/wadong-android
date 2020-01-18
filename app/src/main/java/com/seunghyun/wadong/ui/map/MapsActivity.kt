@@ -1,5 +1,6 @@
 package com.seunghyun.wadong.ui.map
 
+import android.app.AlertDialog
 import android.content.Intent
 import android.os.Bundle
 import com.google.android.gms.maps.SupportMapFragment
@@ -38,4 +39,9 @@ class MapsActivity : BindingActivity<ActivityMapsBinding>(), MapViewController {
 
     override fun startAddStoryActivity() = startActivity(Intent(this, AddStoryActivity::class.java))
     override fun startStoryActivity() = startActivity(Intent(this, StoryActivity::class.java))
+    override fun showPointDialog() {
+        AlertDialog.Builder(this)
+                .setView(R.layout.layout_my_points)
+                .show()
+    }
 }

@@ -33,9 +33,8 @@ class MainViewModel(private val controller: MapViewController) {
         selectedCategory.set(clickedCategory)
     }
 
-    fun onAddButtonClick() {
-        controller.startAddStoryActivity()
-    }
+    fun onAddButtonClick() = controller.startAddStoryActivity()
+    fun onRankButtonClick() = controller.showPointDialog()
 
     fun onMapReady(map: GoogleMap) {
         this.map = map

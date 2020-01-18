@@ -7,4 +7,5 @@ interface MapViewController {
     fun showFoundBottomSheet()
     fun startAddStoryActivity()
     fun startStoryActivity()
+    fun showPointDialog()
 }
