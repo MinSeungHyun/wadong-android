@@ -1,12 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@android:color/white"
-    android:orientation="vertical"
-    app:behavior_hideable="true"
-    app:behavior_peekHeight="200dp"
-    app:layout_behavior="@string/bottom_sheet_behavior">
+<layout>
 
-</LinearLayout>
+    <data>
+
+        <variable
+            name="vm"
+            type="com.seunghyun.wadong.MainViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:orientation="vertical"
+        app:behavior_hideable="true"
+        app:behavior_peekHeight="200dp"
+        app:layout_behavior="@string/bottom_sheet_behavior">
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp">
+
+                <TextView
+                    style="@style/CategoryTextButtonStyle"
+                    android:layout_marginStart="16dp"
+                    android:text="@string/all" />
+
+                <TextView
+                    style="@style/CategoryTextButtonStyle"
+                    android:text="@string/picture" />
+
+                <TextView
+                    style="@style/CategoryTextButtonStyle"
+                    android:text="@string/food" />
+
+                <TextView
+                    style="@style/CategoryTextButtonStyle"
+                    android:text="@string/movie" />
+
+                <TextView
+                    style="@style/CategoryTextButtonStyle"
+                    android:text="@string/book" />
+            </LinearLayout>
+        </HorizontalScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

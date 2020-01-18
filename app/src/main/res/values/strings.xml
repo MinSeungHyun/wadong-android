@@ -1,4 +1,10 @@
 <resources>
     <string name="app_name">Wadong</string>
     <string name="title_activity_maps">Map</string>
+
+    <string name="all">전체</string>
+    <string name="picture">사진</string>
+    <string name="food">음식</string>
+    <string name="movie">영화</string>
+    <string name="book">책</string>
 </resources>
