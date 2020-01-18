@@ -17,7 +17,7 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         app:behavior_hideable="true"
-        app:behavior_peekHeight="200dp"
+        app:behavior_peekHeight="400dp"
         app:layout_behavior="@string/bottom_sheet_behavior">
 
         <androidx.constraintlayout.widget.Guideline
@@ -50,6 +50,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
+            android:fontFamily="@font/noto_sans_black"
             android:text="@string/found_luck"
             android:textColor="@android:color/white"
             android:textSize="24sp"
