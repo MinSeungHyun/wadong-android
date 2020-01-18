@@ -6,7 +6,7 @@ import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.seunghyun.wadong.databinding.ActivityMapsBinding
 import kotlinx.android.synthetic.main.layout_found_bottom_sheet.*
 
-class MapsActivity : BindingActivity<ActivityMapsBinding>() {
+class MapsActivity : BindingActivity<ActivityMapsBinding>(), MainViewController {
     private val viewModel by lazy { MainViewModel(this) }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -23,4 +23,5 @@ class MapsActivity : BindingActivity<ActivityMapsBinding>() {
     }
 
     override fun getLayoutId() = R.layout.activity_maps
+    override fun getContext() = this
 }

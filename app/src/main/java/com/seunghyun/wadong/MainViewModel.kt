@@ -1,6 +1,5 @@
 package com.seunghyun.wadong
 
-import android.content.Context
 import android.graphics.Bitmap
 import android.graphics.Color
 import android.graphics.drawable.BitmapDrawable
@@ -21,7 +20,7 @@ private val LUCK_LOCATIONS = listOf(
         LuckBag("남정초등학교", LatLng(37.536264, 126.965140))
 )
 
-class MainViewModel(private val context: Context) {
+class MainViewModel(private val controller: MainViewController) {
     val selectedCategory = ObservableField<Category>(Category.ALL)
 
     private lateinit var map: GoogleMap
@@ -44,7 +43,7 @@ class MainViewModel(private val context: Context) {
                     .strokeColor(Color.parseColor("#C6FC6767"))
                     .strokeWidth(5f)
 
-            val luckDrawable = ContextCompat.getDrawable(context, R.drawable.luck_icon)!!.current as BitmapDrawable
+            val luckDrawable = ContextCompat.getDrawable(controller.getContext(), R.drawable.luck_icon)!!.current as BitmapDrawable
             val luckBitmap = Bitmap.createScaledBitmap(luckDrawable.bitmap, 70, 70, false)
             val marker = MarkerOptions().icon(BitmapDescriptorFactory.fromBitmap(luckBitmap))
 
