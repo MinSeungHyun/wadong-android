@@ -3,4 +3,7 @@
     <color name="colorPrimary">#fc6767</color>
     <color name="colorPrimaryDark">#fc6767</color>
     <color name="colorAccent">#fc6767</color>
+
+    <color name="categorySelected">@color/colorPrimary</color>
+    <color name="categoryUnselected">#85000000</color>
 </resources>

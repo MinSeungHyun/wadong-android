@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <data>
 
@@ -10,21 +12,58 @@
             type="com.seunghyun.wadong.MainViewModel" />
     </data>
 
-    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@android:color/white"
         android:orientation="vertical"
         app:behavior_hideable="true"
         app:behavior_peekHeight="200dp"
         app:layout_behavior="@string/bottom_sheet_behavior">
 
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/topGuideLine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="100dp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@drawable/background_found_bottom_sheet"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/topGuideLine" />
+
+        <ImageView
+            android:id="@+id/luckImage"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/luck_icon"
+            app:layout_constraintBottom_toBottomOf="@id/topGuideLine"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/topGuideLine"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/foundText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/found_luck"
+            android:textColor="@android:color/white"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/luckImage" />
+
         <HorizontalScrollView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
             android:scrollbars="none"
-            app:layout_constraintTop_toTopOf="parent">
+            app:layout_constraintTop_toBottomOf="@id/foundText">
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -33,33 +72,34 @@
 
                 <TextView
                     style="@style/CategoryTextButtonStyle"
+                    android:layout_marginStart="8dp"
                     android:onClick="@{() -> vm.onCategoryButtonClick(Category.ALL)}"
                     android:text="@string/all"
-                    android:textColor="@{vm.selectedCategory == Category.ALL ? @color/colorPrimary : @android:color/darker_gray}" />
+                    android:textColor="@{vm.selectedCategory == Category.ALL ? @color/categorySelected : @color/categoryUnselected}" />
 
                 <TextView
                     style="@style/CategoryTextButtonStyle"
                     android:onClick="@{() -> vm.onCategoryButtonClick(Category.PICTURE)}"
-                    android:textColor="@{vm.selectedCategory == Category.PICTURE ? @color/colorPrimary : @android:color/darker_gray}"
-                    android:text="@string/picture" />
+                    android:text="@string/picture"
+                    android:textColor="@{vm.selectedCategory == Category.PICTURE ? @color/categorySelected : @color/categoryUnselected}" />
 
                 <TextView
                     style="@style/CategoryTextButtonStyle"
                     android:onClick="@{() -> vm.onCategoryButtonClick(Category.FOOD)}"
-                    android:textColor="@{vm.selectedCategory == Category.FOOD ? @color/colorPrimary : @android:color/darker_gray}"
-                    android:text="@string/food" />
+                    android:text="@string/food"
+                    android:textColor="@{vm.selectedCategory == Category.FOOD ? @color/categorySelected : @color/categoryUnselected}" />
 
                 <TextView
                     style="@style/CategoryTextButtonStyle"
                     android:onClick="@{() -> vm.onCategoryButtonClick(Category.MOVIE)}"
-                    android:textColor="@{vm.selectedCategory == Category.MOVIE ? @color/colorPrimary : @android:color/darker_gray}"
-                    android:text="@string/movie" />
+                    android:text="@string/movie"
+                    android:textColor="@{vm.selectedCategory == Category.MOVIE ? @color/categorySelected : @color/categoryUnselected}" />
 
                 <TextView
                     style="@style/CategoryTextButtonStyle"
                     android:onClick="@{() -> vm.onCategoryButtonClick(Category.BOOK)}"
-                    android:textColor="@{vm.selectedCategory == Category.BOOK ? @color/colorPrimary : @android:color/darker_gray}"
-                    android:text="@string/book" />
+                    android:text="@string/book"
+                    android:textColor="@{vm.selectedCategory == Category.BOOK ? @color/categorySelected : @color/categoryUnselected}" />
             </LinearLayout>
         </HorizontalScrollView>
     </androidx.constraintlayout.widget.ConstraintLayout>

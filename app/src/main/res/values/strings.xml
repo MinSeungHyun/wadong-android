@@ -7,4 +7,5 @@
     <string name="food">음식</string>
     <string name="movie">영화</string>
     <string name="book">책</string>
+    <string name="found_luck">복주머니 발견!!</string>
 </resources>
