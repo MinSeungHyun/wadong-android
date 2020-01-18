@@ -3,6 +3,8 @@
 
     <data>
 
+        <import type="com.seunghyun.wadong.Category" />
+
         <variable
             name="vm"
             type="com.seunghyun.wadong.MainViewModel" />
@@ -27,27 +29,36 @@
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:padding="8dp">
+                android:padding="16dp">
 
                 <TextView
                     style="@style/CategoryTextButtonStyle"
-                    android:layout_marginStart="16dp"
-                    android:text="@string/all" />
+                    android:onClick="@{() -> vm.onCategoryButtonClick(Category.ALL)}"
+                    android:text="@string/all"
+                    android:textColor="@{vm.selectedCategory == Category.ALL ? @color/colorPrimary : @android:color/darker_gray}" />
 
                 <TextView
                     style="@style/CategoryTextButtonStyle"
+                    android:onClick="@{() -> vm.onCategoryButtonClick(Category.PICTURE)}"
+                    android:textColor="@{vm.selectedCategory == Category.PICTURE ? @color/colorPrimary : @android:color/darker_gray}"
                     android:text="@string/picture" />
 
                 <TextView
                     style="@style/CategoryTextButtonStyle"
+                    android:onClick="@{() -> vm.onCategoryButtonClick(Category.FOOD)}"
+                    android:textColor="@{vm.selectedCategory == Category.FOOD ? @color/colorPrimary : @android:color/darker_gray}"
                     android:text="@string/food" />
 
                 <TextView
                     style="@style/CategoryTextButtonStyle"
+                    android:onClick="@{() -> vm.onCategoryButtonClick(Category.MOVIE)}"
+                    android:textColor="@{vm.selectedCategory == Category.MOVIE ? @color/colorPrimary : @android:color/darker_gray}"
                     android:text="@string/movie" />
 
                 <TextView
                     style="@style/CategoryTextButtonStyle"
+                    android:onClick="@{() -> vm.onCategoryButtonClick(Category.BOOK)}"
+                    android:textColor="@{vm.selectedCategory == Category.BOOK ? @color/colorPrimary : @android:color/darker_gray}"
                     android:text="@string/book" />
             </LinearLayout>
         </HorizontalScrollView>
