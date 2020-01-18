@@ -1,5 +1,6 @@
 package com.seunghyun.wadong.ui.add_story.food
 
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
@@ -8,8 +9,8 @@ import com.bumptech.glide.Glide
 import com.seunghyun.wadong.R
 import com.seunghyun.wadong.databinding.ItemRestaurantBinding
 
-class FoodRecyclerViewAdapter(private val viewModel: AddFoodStoryViewModel) : RecyclerView.Adapter<FoodRecyclerViewAdapter.FoodViewHolder>() {
-    private val items = getRestaurants()
+class FoodRecyclerViewAdapter : RecyclerView.Adapter<FoodRecyclerViewAdapter.FoodViewHolder>() {
+    var items = getRestaurants()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): FoodViewHolder {
         val binding = DataBindingUtil.inflate<ItemRestaurantBinding>(
@@ -24,6 +25,7 @@ class FoodRecyclerViewAdapter(private val viewModel: AddFoodStoryViewModel) : Re
     override fun getItemCount() = items.size
 
     override fun onBindViewHolder(holder: FoodViewHolder, position: Int) {
+        Log.d("testing", items.toString())
         holder.bind(items[position])
     }
 

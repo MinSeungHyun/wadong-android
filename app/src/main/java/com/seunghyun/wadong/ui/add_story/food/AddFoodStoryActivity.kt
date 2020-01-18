@@ -14,7 +14,9 @@ class AddFoodStoryActivity : BindingActivity<ActivityAddFoodStoryBinding>(), Foo
         super.onCreate(savedInstanceState)
         binding.apply {
             vm = viewModel
-            recyclerView.adapter = FoodRecyclerViewAdapter(viewModel)
+            recyclerView.adapter = FoodRecyclerViewAdapter()
         }
     }
+
+    override fun getAdapter() = binding.recyclerView.adapter as FoodRecyclerViewAdapter
 }
