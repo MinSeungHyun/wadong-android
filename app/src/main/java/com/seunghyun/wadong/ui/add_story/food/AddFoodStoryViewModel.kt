@@ -15,6 +15,8 @@ class AddFoodStoryViewModel(private val controller: FoodViewController) {
         }
     }
 
+    fun onItemClick(item: Restaurant) = controller.startStoryEditActivity(item)
+
     private fun updateList() = adapter.apply {
         items = originalItems.filter { it.name.contains(searchingText.get()!!) }
         notifyDataSetChanged()

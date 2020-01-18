@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="item"
+            type="com.seunghyun.wadong.ui.add_story.food.Restaurant" />
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="28dp"
+            android:layout_marginBottom="20dp"
+            android:fontFamily="@font/noto_sans_black"
+            android:text="@string/create_story"
+            android:textColor="@color/colorPrimary"
+            android:textSize="24sp" />
+
+        <include
+            layout="@layout/item_restaurant"
+            app:item="@{item}" />
+    </LinearLayout>
+</layout>

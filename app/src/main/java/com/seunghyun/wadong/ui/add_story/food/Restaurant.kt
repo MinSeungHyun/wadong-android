@@ -2,8 +2,9 @@ package com.seunghyun.wadong.ui.add_story.food
 
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
+import java.io.Serializable
 
-data class Restaurant(val name: String, val address: String, val category: String, val image: String)
+data class Restaurant(val name: String, val address: String, val category: String, val image: String) : Serializable
 
 fun getRestaurants(): List<Restaurant> {
     val type = object : TypeToken<List<Restaurant>>() {}.type

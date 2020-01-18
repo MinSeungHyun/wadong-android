@@ -7,6 +7,10 @@
     <data>
 
         <variable
+            name="vm"
+            type="com.seunghyun.wadong.ui.add_story.food.AddFoodStoryViewModel" />
+
+        <variable
             name="item"
             type="com.seunghyun.wadong.ui.add_story.food.Restaurant" />
     </data>
@@ -16,6 +20,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="?attr/selectableItemBackground"
+        android:onClick="@{() -> vm.onItemClick(item)}"
         android:padding="16dp">
 
         <ImageView
