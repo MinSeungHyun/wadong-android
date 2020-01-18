@@ -13,8 +13,8 @@
         android:theme="@style/AppTheme">
 
         <activity
-            android:name=".ui.map.MapsActivity"
-            android:label="@string/title_activity_maps">
+            android:name=".ui.splash.SplashActivity"
+            android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <action android:name="android.intent.action.VIEW" />
@@ -23,6 +23,9 @@
             </intent-filter>
         </activity>
 
+        <activity
+            android:name=".ui.map.MapsActivity"
+            android:label="@string/title_activity_maps" />
         <activity android:name=".ui.add_story.AddStoryActivity" />
         <activity android:name=".ui.add_story.food.AddFoodStoryActivity" />
         <activity android:name=".ui.add_story.story_edit.StoryEditActivity" />
