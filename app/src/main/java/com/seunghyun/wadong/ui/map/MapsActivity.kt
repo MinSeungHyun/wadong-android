@@ -23,6 +23,7 @@ class MapsActivity : BindingActivity<ActivityMapsBinding>(), MapViewController {
         binding.apply {
             vm = viewModel
             BottomSheetBehavior.from(foundBottomSheet).state = BottomSheetBehavior.STATE_HIDDEN
+            recyclerView.adapter = FoodRecyclerViewAdapter()
         }
     }
 
