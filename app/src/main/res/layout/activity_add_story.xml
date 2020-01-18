@@ -5,8 +5,8 @@
     <data>
 
         <variable
-            name="vm"
-            type="com.seunghyun.wadong.ui.add_story.AddStoryViewModel" />
+            name="activity"
+            type="com.seunghyun.wadong.ui.add_story.AddStoryActivity" />
     </data>
 
     <ScrollView
@@ -33,24 +33,28 @@
 
             <include
                 layout="@layout/layout_add_story_card"
+                app:activity="@{activity}"
                 app:description="@{@string/picture_description}"
                 app:image="@{@drawable/picture_image}"
                 app:title="@{@string/picture}" />
 
             <include
                 layout="@layout/layout_add_story_card"
+                app:activity="@{activity}"
                 app:description="@{@string/food_description}"
                 app:image="@{@drawable/food_image}"
                 app:title="@{@string/food}" />
 
             <include
                 layout="@layout/layout_add_story_card"
+                app:activity="@{activity}"
                 app:description="@{@string/movie_description}"
                 app:image="@{@drawable/movie_image}"
                 app:title="@{@string/movie}" />
 
             <include
                 layout="@layout/layout_add_story_card"
+                app:activity="@{activity}"
                 app:description="@{@string/book_description}"
                 app:image="@{@drawable/book_image}"
                 app:title="@{@string/book}" />

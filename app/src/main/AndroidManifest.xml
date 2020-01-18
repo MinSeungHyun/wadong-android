@@ -24,6 +24,7 @@
         </activity>
 
         <activity android:name=".ui.add_story.AddStoryActivity" />
+        <activity android:name=".ui.add_story.food.AddFoodStoryActivity" />
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"

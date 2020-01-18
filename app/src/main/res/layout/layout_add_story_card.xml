@@ -5,6 +5,10 @@
     <data>
 
         <variable
+            name="activity"
+            type="com.seunghyun.wadong.ui.add_story.AddStoryActivity" />
+
+        <variable
             name="image"
             type="android.graphics.drawable.Drawable" />
 
@@ -18,6 +22,7 @@
     </data>
 
     <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/card"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -35,6 +40,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:background="?attr/selectableItemBackground"
+                android:onClick="@{() -> activity.onCardClick(title)}"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
