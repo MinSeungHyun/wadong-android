@@ -20,6 +20,17 @@
             android:paddingTop="8dp"
             android:paddingBottom="8dp">
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:fontFamily="@font/noto_sans_black"
+                android:text="@string/create_story"
+                android:textColor="@color/colorPrimary"
+                android:textSize="24sp" />
+
             <include
                 layout="@layout/layout_add_story_card"
                 app:description="@{@string/picture_description}"

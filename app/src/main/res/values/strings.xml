@@ -12,4 +12,5 @@
     <string name="food_description">치킨은 살 안쪄요 살은 내가 쪄요.</string>
     <string name="movie_description">영화 그 이상의 감동.</string>
     <string name="book_description">하루라도 책을 읽지 않으면 입안에 가시가 돋는다.</string>
+    <string name="create_story">스토리 생성</string>
 </resources>
