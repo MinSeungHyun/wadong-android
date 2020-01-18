@@ -6,4 +6,6 @@
 
     <color name="categorySelected">@color/colorPrimary</color>
     <color name="categoryUnselected">#2C000000</color>
+
+    <color name="grayText">#444444</color>
 </resources>
