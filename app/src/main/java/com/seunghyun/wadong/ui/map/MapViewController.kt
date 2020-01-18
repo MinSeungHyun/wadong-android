@@ -8,4 +8,5 @@ interface MapViewController {
     fun startAddStoryActivity()
     fun startStoryActivity()
     fun showPointDialog()
+    fun showLuckFoundDialog()
 }

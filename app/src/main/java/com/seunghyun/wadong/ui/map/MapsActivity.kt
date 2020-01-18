@@ -44,4 +44,10 @@ class MapsActivity : BindingActivity<ActivityMapsBinding>(), MapViewController {
                 .setView(R.layout.layout_my_points)
                 .show()
     }
+
+    override fun showLuckFoundDialog() {
+        AlertDialog.Builder(this)
+                .setView(R.layout.layout_luck_found)
+                .show()
+    }
 }

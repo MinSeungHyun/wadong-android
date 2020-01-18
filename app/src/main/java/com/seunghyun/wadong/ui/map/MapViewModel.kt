@@ -3,6 +3,7 @@ package com.seunghyun.wadong.ui.map
 import android.graphics.Bitmap
 import android.graphics.Color
 import android.graphics.drawable.BitmapDrawable
+import android.os.Handler
 import androidx.core.content.ContextCompat
 import androidx.databinding.ObservableField
 import com.google.android.gms.maps.CameraUpdateFactory
@@ -69,5 +70,9 @@ class MainViewModel(private val controller: MapViewController) {
                 if (isStoryAdded) addMarker(MarkerOptions().position(LatLng(37.533771, 126.960510)).title("내 스토리"))
             }
         }
+
+        Handler().postDelayed({
+            controller.showLuckFoundDialog()
+        }, 2000)
     }
 }
