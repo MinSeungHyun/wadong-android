@@ -2,7 +2,9 @@ package com.seunghyun.wadong
 
 import android.os.Bundle
 import com.google.android.gms.maps.SupportMapFragment
+import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.seunghyun.wadong.databinding.ActivityMapsBinding
+import kotlinx.android.synthetic.main.layout_found_bottom_sheet.*
 
 class MapsActivity : BindingActivity<ActivityMapsBinding>() {
     private val viewModel by lazy { MainViewModel() }
@@ -16,6 +18,7 @@ class MapsActivity : BindingActivity<ActivityMapsBinding>() {
 
         binding.apply {
             vm = viewModel
+            BottomSheetBehavior.from(bottomSheet).state = BottomSheetBehavior.STATE_HIDDEN
         }
     }
 

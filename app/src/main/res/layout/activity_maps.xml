@@ -41,7 +41,6 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <include
-            android:id="@+id/bottomSheet"
             layout="@layout/layout_found_bottom_sheet"
             app:vm="@{vm}" />
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
