@@ -53,27 +53,13 @@
             app:layout_constraintTop_toTopOf="@id/topGuideLine"
             tools:ignore="ContentDescription" />
 
-        <TextView
-            android:id="@+id/foundText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:fontFamily="@font/noto_sans_black"
-            android:text="@string/found_luck"
-            android:textColor="@android:color/black"
-            android:textSize="24sp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/luckImage" />
-
         <HorizontalScrollView
             android:id="@+id/tabLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
             android:scrollbars="none"
-            app:layout_constraintTop_toBottomOf="@id/foundText">
+            app:layout_constraintTop_toBottomOf="@id/luckImage"
+            tools:layout_editor_absoluteY="208dp">
 
             <LinearLayout
                 android:layout_width="wrap_content"
