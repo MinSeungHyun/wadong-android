@@ -5,5 +5,5 @@
     <color name="colorAccent">#fc6767</color>
 
     <color name="categorySelected">@color/colorPrimary</color>
-    <color name="categoryUnselected">#85FFFFFF</color>
+    <color name="categoryUnselected">#2C000000</color>
 </resources>
