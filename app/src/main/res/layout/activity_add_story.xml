@@ -35,6 +35,7 @@
                 layout="@layout/layout_add_story_card"
                 app:activity="@{activity}"
                 app:description="@{@string/picture_description}"
+                app:illust="@{@drawable/picture_illust}"
                 app:image="@{@drawable/picture_image}"
                 app:title="@{@string/picture}" />
 
@@ -42,6 +43,7 @@
                 layout="@layout/layout_add_story_card"
                 app:activity="@{activity}"
                 app:description="@{@string/food_description}"
+                app:illust="@{@drawable/food_illust}"
                 app:image="@{@drawable/food_image}"
                 app:title="@{@string/food}" />
 
@@ -49,6 +51,7 @@
                 layout="@layout/layout_add_story_card"
                 app:activity="@{activity}"
                 app:description="@{@string/movie_description}"
+                app:illust="@{@drawable/movie_illust}"
                 app:image="@{@drawable/movie_image}"
                 app:title="@{@string/movie}" />
 
@@ -56,6 +59,7 @@
                 layout="@layout/layout_add_story_card"
                 app:activity="@{activity}"
                 app:description="@{@string/book_description}"
+                app:illust="@{@drawable/book_illust}"
                 app:image="@{@drawable/book_image}"
                 app:title="@{@string/book}" />
         </LinearLayout>
