@@ -23,6 +23,8 @@
             </intent-filter>
         </activity>
 
+        <activity android:name=".ui.add_story.AddStoryActivity" />
+
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key" />
