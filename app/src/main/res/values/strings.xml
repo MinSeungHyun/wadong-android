@@ -8,4 +8,8 @@
     <string name="movie">영화</string>
     <string name="book">책</string>
     <string name="found_luck">복주머니 발견!!</string>
+    <string name="picture_description">사진은 찍는 것이 아니라 만드는 것이다.</string>
+    <string name="food_description">치킨은 살 안쪄요 살은 내가 쪄요.</string>
+    <string name="movie_description">영화 그 이상의 감동.</string>
+    <string name="book_description">하루라도 책을 읽지 않으면 입안에 가시가 돋는다.</string>
 </resources>

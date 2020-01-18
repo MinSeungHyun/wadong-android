@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
 
@@ -8,10 +9,40 @@
             type="com.seunghyun.wadong.ui.add_story.AddStoryViewModel" />
     </data>
 
-    <GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="match_parent">
 
-    </GridLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp">
+
+            <include
+                layout="@layout/layout_add_story_card"
+                app:description="@{@string/picture_description}"
+                app:image="@{@drawable/picture_image}"
+                app:title="@{@string/picture}" />
+
+            <include
+                layout="@layout/layout_add_story_card"
+                app:description="@{@string/food_description}"
+                app:image="@{@drawable/food_image}"
+                app:title="@{@string/food}" />
+
+            <include
+                layout="@layout/layout_add_story_card"
+                app:description="@{@string/movie_description}"
+                app:image="@{@drawable/movie_image}"
+                app:title="@{@string/movie}" />
+
+            <include
+                layout="@layout/layout_add_story_card"
+                app:description="@{@string/book_description}"
+                app:image="@{@drawable/book_image}"
+                app:title="@{@string/book}" />
+        </LinearLayout>
+    </ScrollView>
 </layout>
