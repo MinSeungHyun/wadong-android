@@ -7,7 +7,7 @@ import com.seunghyun.wadong.databinding.ActivityMapsBinding
 import kotlinx.android.synthetic.main.layout_found_bottom_sheet.*
 
 class MapsActivity : BindingActivity<ActivityMapsBinding>() {
-    private val viewModel by lazy { MainViewModel() }
+    private val viewModel by lazy { MainViewModel(this) }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
