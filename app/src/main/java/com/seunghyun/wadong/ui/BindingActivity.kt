@@ -1,4 +1,4 @@
-package com.seunghyun.wadong
+package com.seunghyun.wadong.ui
 
 import android.os.Bundle
 import androidx.annotation.LayoutRes

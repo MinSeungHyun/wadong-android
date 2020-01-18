@@ -5,11 +5,11 @@
 
     <data>
 
-        <import type="com.seunghyun.wadong.Category" />
+        <import type="com.seunghyun.wadong.models.Category" />
 
         <variable
             name="vm"
-            type="com.seunghyun.wadong.MainViewModel" />
+            type="com.seunghyun.wadong.ui.map.MainViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

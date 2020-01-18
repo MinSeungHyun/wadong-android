@@ -1,13 +1,14 @@
-package com.seunghyun.wadong
+package com.seunghyun.wadong.ui.map
 
 import android.os.Bundle
-import android.util.Log
 import com.google.android.gms.maps.SupportMapFragment
 import com.google.android.material.bottomsheet.BottomSheetBehavior
+import com.seunghyun.wadong.R
 import com.seunghyun.wadong.databinding.ActivityMapsBinding
+import com.seunghyun.wadong.ui.BindingActivity
 import kotlinx.android.synthetic.main.layout_found_bottom_sheet.*
 
-class MapsActivity : BindingActivity<ActivityMapsBinding>(), MainViewController {
+class MapsActivity : BindingActivity<ActivityMapsBinding>(), MapViewController {
     private val viewModel by lazy { MainViewModel(this) }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -26,7 +27,6 @@ class MapsActivity : BindingActivity<ActivityMapsBinding>(), MainViewController 
     override fun getLayoutId() = R.layout.activity_maps
     override fun getContext() = this
     override fun showFoundBottomSheet() {
-        Log.d("testing", "show")
         BottomSheetBehavior.from(foundBottomSheet).state = BottomSheetBehavior.STATE_HALF_EXPANDED
     }
 }

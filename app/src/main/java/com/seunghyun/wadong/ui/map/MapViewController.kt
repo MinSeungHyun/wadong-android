@@ -1,8 +1,8 @@
-package com.seunghyun.wadong
+package com.seunghyun.wadong.ui.map
 
 import android.content.Context
 
-interface MainViewController {
+interface MapViewController {
     fun getContext(): Context
     fun showFoundBottomSheet()
 }

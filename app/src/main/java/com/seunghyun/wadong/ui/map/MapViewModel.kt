@@ -1,4 +1,4 @@
-package com.seunghyun.wadong
+package com.seunghyun.wadong.ui.map
 
 import android.graphics.Bitmap
 import android.graphics.Color
@@ -11,6 +11,9 @@ import com.google.android.gms.maps.model.BitmapDescriptorFactory
 import com.google.android.gms.maps.model.CircleOptions
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
+import com.seunghyun.wadong.R
+import com.seunghyun.wadong.models.Category
+import com.seunghyun.wadong.models.LuckBag
 
 private val LUCK_LOCATIONS = listOf(
         LuckBag("용산구 한강대로", LatLng(37.529815, 126.964352)),
@@ -20,7 +23,7 @@ private val LUCK_LOCATIONS = listOf(
         LuckBag("남정초등학교", LatLng(37.536264, 126.965140))
 )
 
-class MainViewModel(private val controller: MainViewController) {
+class MainViewModel(private val controller: MapViewController) {
     val selectedCategory = ObservableField<Category>(Category.ALL)
 
     private lateinit var map: GoogleMap

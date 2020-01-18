@@ -1,4 +1,4 @@
-package com.seunghyun.wadong
+package com.seunghyun.wadong.models
 
 import com.google.android.gms.maps.model.LatLng
 

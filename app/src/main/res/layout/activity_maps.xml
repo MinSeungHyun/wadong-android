@@ -8,7 +8,7 @@
 
         <variable
             name="vm"
-            type="com.seunghyun.wadong.MainViewModel" />
+            type="com.seunghyun.wadong.ui.map.MainViewModel" />
     </data>
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
@@ -24,7 +24,7 @@
                 android:name="com.google.android.gms.maps.SupportMapFragment"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                tools:context=".MapsActivity" />
+                tools:context=".ui.map.MapsActivity" />
 
             <ImageView
                 style="@style/ClickableViewStyle"
