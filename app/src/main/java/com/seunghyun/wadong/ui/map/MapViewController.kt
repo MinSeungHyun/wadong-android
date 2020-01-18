@@ -5,4 +5,5 @@ import android.content.Context
 interface MapViewController {
     fun getContext(): Context
     fun showFoundBottomSheet()
+    fun startAddStoryActivity()
 }

@@ -1,11 +1,13 @@
 package com.seunghyun.wadong.ui.map
 
+import android.content.Intent
 import android.os.Bundle
 import com.google.android.gms.maps.SupportMapFragment
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.seunghyun.wadong.R
 import com.seunghyun.wadong.databinding.ActivityMapsBinding
 import com.seunghyun.wadong.ui.BindingActivity
+import com.seunghyun.wadong.ui.add_story.AddStoryActivity
 import kotlinx.android.synthetic.main.layout_found_bottom_sheet.*
 
 class MapsActivity : BindingActivity<ActivityMapsBinding>(), MapViewController {
@@ -29,4 +31,6 @@ class MapsActivity : BindingActivity<ActivityMapsBinding>(), MapViewController {
     override fun showFoundBottomSheet() {
         BottomSheetBehavior.from(foundBottomSheet).state = BottomSheetBehavior.STATE_HALF_EXPANDED
     }
+
+    override fun startAddStoryActivity() = startActivity(Intent(this, AddStoryActivity::class.java))
 }

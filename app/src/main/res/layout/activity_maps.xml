@@ -33,6 +33,7 @@
                 android:layout_marginBottom="32dp"
                 android:background="@drawable/ripple_add_button"
                 android:elevation="8dp"
+                android:onClick="@{() -> vm.onAddButtonClick()}"
                 android:padding="12dp"
                 android:src="@drawable/ic_add"
                 app:layout_constraintBottom_toBottomOf="parent"

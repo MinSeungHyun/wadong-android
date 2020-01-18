@@ -32,6 +32,10 @@ class MainViewModel(private val controller: MapViewController) {
         selectedCategory.set(clickedCategory)
     }
 
+    fun onAddButtonClick() {
+        controller.startAddStoryActivity()
+    }
+
     fun onMapReady(map: GoogleMap) {
         this.map = map
         val currentLocation = LatLng(37.534753, 126.964309)
